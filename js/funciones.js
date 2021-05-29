@@ -113,8 +113,9 @@ $('#submitClick').click(function(){
 
     
    
-   $('#dynamicProgress').attr("aria-valuenow" , valorBarra).css("background-color", colorBarra).css("width", val + "%")
+   $('#dynamicProgress').attr("aria-valuenow" , valorBarra).css("background-color", colorBarra).css("width", val + "%");  
 
+   $('#dynamicProgress').text(valorBarra + '%');
 
    
 })
