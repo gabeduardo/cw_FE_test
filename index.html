@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+<head>
+  <title>Prueba de Bootstrap 4</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="StyleSheet" href="./css/estilos.css" type="text/css">
+  <style>
+    a {
+ 
+  text-decoration: none; /* no underline */
+}
+
+.avatars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.avatarLideres {
+  position: relative;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+}
+
+.avatarLideres:not(:last-child) {
+  margin-left: -60px;
+}
+
+.avatarLideres img {
+  width: 100%;
+  display: block;
+}
+
+
+
+
+.card-header{
+
+background-color: #ffffff;
+} 
+i{
+    color: gray;
+}
+.btn-respuesta{
+    background-color: white;
+}
+.prioridad{
+
+color: crimson;
+}
+
+
+
+#respuesta1, #accordionP{
+     background-color: #f2f4f9;
+}
+
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+@media (min-width: 992px) {
+.textElements{
+    position: absolute; bottom: 0;
+}
+
+}
+
+.textElementsName{
+    color:#abb6ff;
+}
+
+
+
+.card-body{
+    background-color: white;
+    width: 80%;
+}
+
+#acciones1, #acciones2{
+    background-color: white;
+   
+}
+
+.acciones{
+    padding: 3%;
+}
+
+.custom-control-label:before{
+  background-color:#f2f4f9;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color:#1dc9b6;
+}
+
+.custom-control-label {
+    margin-left: 2%;
+}
+
+
+.card{
+    background-color: #f2f4f9;
+    padding-bottom: 10%;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+    <div class="container mt-3" id="containerHeader">
+
+        <div class="row">
+            <div class="col-lg-2"  >
+
+                <div class="row">
+                    <div id="radialprogress" ></div>
+
+                </div>
+                <div class="row">
+                    <p class="small text-muted text-justify">Estado del objetivo</p>
+                </div>
+              
+                
+            </div>
+            <div class="col-lg-2"  >
+              <h6 class="text-muted text-capitalize   ">Fecha de inicio</h6> 
+              <p class="font-weight-bold" >18/12/2020</p>
+
+      
+            </div>
+            <div class="col-lg-2"  >
+                <h6 class="text-muted text-capitalize  " >Fecha finalizacion</h6> 
+                <p class="font-weight-bold">31/12/2020</p>
+  
+        
+              </div>
+
+              <div class="col-lg-2"  >
+                <h6 class="text-muted text-capitalize ">Dias restantes</h6> 
+                <p class="font-weight-bold">40</p>
+  
+        
+              </div>
+
+              <div class="col-lg-3 offset-lg-1"  >
+                <p class="float-left text-muted"> Lideres </p>
+                    <div class="avatars">
+                        <span class="avatarLideres">
+                              <img  src="images/img_avatar.png">
+                          </span>
+                        <span class="avatarLideres">
+                              <img src="images/img_avatar2.png">
+                          </span>
+                        <span class="avatarLideres">
+                              <img src="images/img_avatar.png">
+                          </span>
+                    
+                      </div>
+               
+
+                
+                
+  
+        
+              </div>
+          </div>
+          
+
+    </div>
+  <div class="container" id="containerBody">
+
+    <div id="accordionP">
+        <i class="fas fa-minus-circle" data-toggle="collapse" data-target="#accordion1"></i>
+        <button class="btn  " data-toggle="collapse" data-target="#accordion1" aria-expanded="true" aria-controls="respuesta1" style="background-color: #f2f4f9;">
+            <span class="font-weight-bold">  Resultados clave </span>
+          
+        </button>
+        <div id="accordion1" class="collapse show" aria-labelledby="cabecera1" data-parent="#accordionP">
+            <div class="card" id="bodyAccordion1">
+              <div class="card-header container" id="cabecera1">
+
+                <div class="row">
+
+                    <div class="col-lg-7 "><i class="fas fa-minus-circle" data-toggle="collapse" data-target="#cuerpo"></i>
+                        <button class="btn btn-respuesta " data-toggle="collapse" data-target="#cuerpo" aria-expanded="true" aria-controls="respuesta1">
+                            <span class="font-weight-bold">Terminar proyecto OKS </span>
+                        </button>
+                        <div class="container">
+                            <span class="text-muted">Desde: </span> 31/12/2020
+                            
+                            <span class="text-muted" >Hasta :31/12/2020 </span>
+                            
+                            <span class="text-muted">
+                                Restan: 31 dias 
+                            </span>
+                            
+                            <span class="text-muted">
+                                Prioridad:
+                                <span class="prioridad">Alta</span> 
+                            </span>
+                             
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 offset-lg-1">
+                        <div class="progress">
+                            <div id="dynamicProgress" class="progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:70%; background-color: #ffbe37;">
+                              <span class="sr-only">70% Complete</span>
+                            </div>
+                          </div>
+                    </div>
+                    
+                </div>
+                
+                 
+                
+              </div>
+<div id="cuerpo" class="collapse show">     
+              <div id="respuesta1" class="collapse show" aria-labelledby="cabecera1" data-parent="#accordion1">
+                          <div  class="container-fluid card-body float-right  mt-3  "  data-target="#acciones1" data-toggle="collapse">
+                              
+                              
+                                  <div class="row">
+      
+                                      <div class="col-lg-2">
+                                          <i class="fas fas fa-minus-circle"></i>
+                                          <img src="images/img_avatar.png" alt="Avatar" class="avatar d-none d-lg-block float-right">
+                                      </div>
+      
+      
+                                      <div class="col-lg-4"> 
+                                          <span class="textElements">
+
+                                            <span style="color:#899bfe">
+                                                Yo 
+                                            </span>
+                                             
+                                              <br>
+                                              Ultima act 20/10/2020, 03:25pm 
+      
+                                          </span>
+                                       
+                                      </div>
+      
+      
+                                      <div class="col-lg-2 ">
+                                          <span class="textElements" >Tareas: 3 </span>
+                                      </div>
+                                   
+                                      <div class="col-lg-1 offset-lg-2 ">
+                                          35%
+                                      </div>
+                                      <div class="col-lg-1">
+                                        <i class="fas fa-circle" style="color:#ffbe37"></i>
+                                      </div>
+                                  </div>
+      
+                              
+      
+      
+      
+                          </div>
+                      
+      
+                          <div id="acciones1" class=" mt-3 collapse show  float-right w-75"  data-parent="#respuesta1" >
+                             
+      
+                                      <p class="font-weight-bold acciones">Acciones:</p>
+                                          
+                                      <ul class="list-group list-group-flush">
+                                          <li class="list-group-item">
+                                          <!-- -->
+                                          <div class="custom-control custom-checkbox container">
+      
+                                              <div class="row">
+      
+                                                  <div class="col-lg-4"> <input type="checkbox" class="custom-control-input " id="check1" checked>
+                                                      <label class="custom-control-label  rounded-circle" for="check1">Enviar los archivos </label>
+                                                  </div>
+      
+      
+                                                  <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
+      
+                                                  <div class="col-lg-2">Dias: 32</div>
+      
+                                              </div>
+      
+                                             
+      
+      
+                                          </div>
+                                          </li>
+      
+      
+                                          <li class="list-group-item">
+                                              <!-- -->
+                                              <div class="custom-control custom-checkbox container">
+          
+                                                  <div class="row">
+          
+                                                      <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check2" >
+                                                          <label class="custom-control-label  rounded-circle" for="check2">Recompilar todos los elementos </label>
+                                                      </div>
+          
+          
+                                                      <div class="col-lg-4 offset-lg-2"> 18/10/2020 -</div>
+          
+                                                      <div class="col-lg-2">Dias:</div>
+          
+                                                  </div>
+          
+                                                 
+          
+          
+                                              </div>
+                                              </li>
+      
+      
+      
+                                              <li class="list-group-item">
+                                                  <!-- -->
+                                                  <div class="custom-control custom-checkbox container">
+              
+                                                      <div class="row">
+              
+                                                          <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check3" checked>
+                                                              <label class="custom-control-label  rounded-circle" for="check3">Exportar los CSS </label>
+                                                          </div>
+              
+              
+                                                          <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
+              
+                                                          <div class="col-lg-2">Dias: 32</div>
+              
+                                                      </div>
+              
+                                                     
+              
+              
+                                                  </div>
+                                                  </li>
+                                     
+                                          
+                                      </ul>
+      
+                           </div>
+      
+      
+      
+              </div>
+      
+      
+              <div id="respuesta2" class="collapse show mt-1" aria-labelledby="cabecera1" data-parent="#accordion1">
+                <div  class="container-fluid card-body float-right  mt-3  "  data-target="#acciones2" data-toggle="collapse">
+                    
+                    
+                        <div class="row">
+
+                            <div class="col-lg-2">
+                                <i class="fas fas fa-minus-circle"></i>
+                                <img src="images/img_avatar2.png" alt="Avatar" class="avatar d-none d-lg-block float-right">
+                            </div>
+
+
+                            <div class="col-lg-4"> 
+                                <span class="textElements">
+                                    <span style="color:#899bfe"> 
+                                        Chinmay Sarasvati
+                                    </span>
+                                    
+                                    <br>
+                                    Ultima act 20/10/2020, 03:25pm 
+
+                                </span>
+                             
+                            </div>
+
+
+                            <div class="col-lg-2 ">
+                                <span class="textElements" >Tareas: 3 </span>
+                            </div>
+                         
+                            <div class="col-lg-1 offset-lg-2 ">
+                                12%
+                            </div>
+                            <div class="col-lg-1">
+                                <i class="fas fa-circle" style="color:#1dc9b6"></i>
+                            </div>
+                        </div>
+
+                    
+
+
+
+                </div>
+
+                <div id="acciones2" class=" mt-3 collapse   float-right w-75"  data-parent="#respuesta2" >
+                             
+      
+                    <p class="font-weight-bold acciones">Acciones:</p>
+                        
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                        <!-- -->
+                        <div class="custom-control custom-checkbox container">
+
+                            <div class="row">
+
+                                <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check1" checked>
+                                    <label class="custom-control-label  rounded-circle" for="check1">Enviar los archivos </label>
+                                </div>
+
+
+                                <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
+
+                                <div class="col-lg-2">Dias: 32</div>
+
+                            </div>
+
+                           
+
+
+                        </div>
+                        </li>
+
+
+                        <li class="list-group-item">
+                            <!-- -->
+                            <div class="custom-control custom-checkbox container">
+
+                                <div class="row">
+
+                                    <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check2" >
+                                        <label class="custom-control-label  rounded-circle" for="check2">Recompilar todos los elementos </label>
+                                    </div>
+
+
+                                    <div class="col-lg-4 offset-lg-2"> 18/10/2020 -</div>
+
+                                    <div class="col-lg-2">Dias:</div>
+
+                                </div>
+
+                               
+
+
+                            </div>
+                            </li>
+
+
+
+                            <li class="list-group-item">
+                                <!-- -->
+                                <div class="custom-control custom-checkbox container">
+
+                                    <div class="row">
+
+                                        <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check3" checked>
+                                            <label class="custom-control-label  rounded-circle" for="check3">Exportar los CSS </label>
+                                        </div>
+
+
+                                        <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
+
+                                        <div class="col-lg-2">Dias: 32</div>
+
+                                    </div>
+
+                                   
+
+
+                                </div>
+                                </li>
+                   
+                        
+                    </ul>
+
+         </div>
+              </div>
+            
+              <div id="respuesta3" class="collapse show mt-1" aria-labelledby="cabecera1" data-parent="#accordion1">
+                <div  class="container-fluid card-body float-right  mt-3  "  data-target="#acciones3" data-toggle="collapse">
+                    
+                    
+                        <div class="row">
+
+                            <div class="col-lg-2">
+                                <i class="fas fas fa-minus-circle"></i>
+                                <img src="images/img_avatar2.png" alt="Avatar" class="avatar d-none d-lg-block float-right">
+                            </div>
+
+
+                            <div class="col-lg-4"> 
+                                <span class="textElements">
+                                    <span style="color:#899bfe"> 
+                                        Lucy Miller
+                                    </span>
+                                    <br>
+                                    Ultima act 20/10/2020, 03:25pm 
+
+                                </span>
+                             
+                            </div>
+
+
+                            <div class="col-lg-2 ">
+                                <span class="textElements" >Tareas: 3 </span>
+                            </div>
+                         
+                            <div class="col-lg-1 offset-lg-2 ">
+                                12%
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-circle" style="color:#1dc9b6"></i>
+                            </div>
+                        </div>
+
+                    
+
+
+
+                </div>
+              </div>
+            </div>           
+              
+            </div>
+      
+          </div>
+    </div>
+
+  
+
+  </div>
+
+
+  <div class="container mt-5">
+    <label for="percent">Ingrese porcentaje de completado</label>
+    <input id="percent" name="percent" value=70>
+    <button  class="btn btn-info" id='submitClick' name='submitButton' >Ingresar</button>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="./js/funciones.js"></script>
+  <script>
+
+$(document).ready(function(){ 
+
+
+    $( ".fas" ).each(function(index) {
+    $(this).on("click", function(){
+        if ($(this  ).hasClass("fa-minus-circle")) {
+            $(this).toggleClass("fa fa-plus-circle")
+            
+        } 
+
+        else{
+            $(this).addClass("fa fa-minus-circle")
+        }
+        
+    });
+
+
+
+
+   
+ 
+});
+
+});
+
+
+
+</script>
+</body>
+</html>
