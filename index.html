@@ -147,7 +147,7 @@ color: crimson;
               </div>
 
               <div class="col-lg-2"  >
-                <h6 class="text-muted text-capitalize ">Dias restantes</h6> 
+                <h6 class="text-muted text-capitalize "> <span class="text-muted">Dias</span> restantes</h6> 
                 <p class="font-weight-bold">40</p>
   
         
@@ -192,8 +192,8 @@ color: crimson;
 
                 <div class="row">
 
-                    <div class="col-lg-7 "><i class="fas fa-minus-circle" data-toggle="collapse" data-target="#cuerpo"></i>
-                        <button class="btn btn-respuesta " data-toggle="collapse" data-target="#cuerpo" aria-expanded="true" aria-controls="respuesta1">
+                    <div class="col-lg-7 "><i class="fas fa-minus-circle" data-toggle="collapse" data-target="#cuerpo"  aria-expanded="true" aria-controls="respuesta1"></i>
+                        <button class="btn btn-respuesta " data-toggle="collapse" data-target="#cuerpo">
                             <span class="font-weight-bold">Terminar proyecto OKS </span>
                         </button>
                         <div class="container">
@@ -293,7 +293,7 @@ color: crimson;
       
                                                   <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
       
-                                                  <div class="col-lg-2">Dias: 32</div>
+                                                  <div class="col-lg-2"><span class="text-muted">Dias:</span> 32</div>
       
                                               </div>
       
@@ -317,7 +317,7 @@ color: crimson;
           
                                                       <div class="col-lg-4 offset-lg-2"> 18/10/2020 -</div>
           
-                                                      <div class="col-lg-2">Dias:</div>
+                                                      <div class="col-lg-2"><span class="text-muted">Dias:</span></div>
           
                                                   </div>
           
@@ -342,7 +342,7 @@ color: crimson;
               
                                                           <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
               
-                                                          <div class="col-lg-2">Dias: 32</div>
+                                                          <div class="col-lg-2"><span class="text-muted">Dias:</span> 32</div>
               
                                                       </div>
               
@@ -369,7 +369,7 @@ color: crimson;
                         <div class="row">
 
                             <div class="col-lg-2">
-                                <i class="fas fas fa-minus-circle"></i>
+                                <i class="fas fa-plus-circle"></i>
                                 <img src="images/img_avatar2.png" alt="Avatar" class="avatar d-none d-lg-block float-right">
                             </div>
 
@@ -418,14 +418,14 @@ color: crimson;
 
                             <div class="row">
 
-                                <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check1" checked>
-                                    <label class="custom-control-label  rounded-circle" for="check1">Enviar los archivos </label>
+                                <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check12" checked>
+                                    <label class="custom-control-label  rounded-circle" for="check12">Enviar los archivos 2 </label>
                                 </div>
 
 
                                 <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
 
-                                <div class="col-lg-2">Dias: 32</div>
+                                <div class="col-lg-2"><span class="text-muted">Dias:</span> 32</div>
 
                             </div>
 
@@ -442,14 +442,14 @@ color: crimson;
 
                                 <div class="row">
 
-                                    <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check2" >
-                                        <label class="custom-control-label  rounded-circle" for="check2">Recompilar todos los elementos </label>
+                                    <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check22" >
+                                        <label class="custom-control-label  rounded-circle" for="check22">Recompilar todos los elementos 2 </label>
                                     </div>
 
 
                                     <div class="col-lg-4 offset-lg-2"> 18/10/2020 -</div>
 
-                                    <div class="col-lg-2">Dias:</div>
+                                    <div class="col-lg-2"><span class="text-muted">Dias:</span>32</div>
 
                                 </div>
 
@@ -467,14 +467,14 @@ color: crimson;
 
                                     <div class="row">
 
-                                        <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check3" checked>
-                                            <label class="custom-control-label  rounded-circle" for="check3">Exportar los CSS </label>
+                                        <div class="col-lg-4"> <input type="checkbox" class="custom-control-input" id="check32" checked>
+                                            <label class="custom-control-label  rounded-circle" for="check32">Exportar los CSS 2 </label>
                                         </div>
 
 
                                         <div class="col-lg-4 offset-lg-2"> 18/10/2020-21/10/2020</div>
 
-                                        <div class="col-lg-2">Dias: 32</div>
+                                        <div class="col-lg-2"> <span class="text-muted">Dias </span>: 32</div>
 
                                     </div>
 
@@ -497,7 +497,7 @@ color: crimson;
                         <div class="row">
 
                             <div class="col-lg-2">
-                                <i class="fas fas fa-minus-circle"></i>
+                                <i class=" fa fa-plus-circle"></i>
                                 <img src="images/img_avatar2.png" alt="Avatar" class="avatar d-none d-lg-block float-right">
                             </div>
 
@@ -568,11 +568,13 @@ $(document).ready(function(){
     $( ".fas" ).each(function(index) {
     $(this).on("click", function(){
         if ($(this  ).hasClass("fa-minus-circle")) {
-            $(this).toggleClass("fa fa-plus-circle")
+            $(this).removeClass("fa fa-minus-circle")
+            $(this).addClass("fa fa-plus-circle")
             
         } 
 
         else{
+            $(this).removeClass("fa fa-plus-circle")
             $(this).addClass("fa fa-minus-circle")
         }
         
